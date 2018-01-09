@@ -1,0 +1,8 @@
+repo: 'https://github.com/devec0/charm-rally.git'
+includes: 
+  - 'layer:openstack'
+  - 'interface:mysql-shared'
+options:
+  basic:
+    packages:
+      - 'rally'

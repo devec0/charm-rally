@@ -1,0 +1,27 @@
+options:
+  debug:
+    type: boolean
+    default: False
+    description: "Enable debug logging in Rally"
+  use-syslog:
+    type: boolean
+    default: True
+    description: "Use syslog for logging"
+  openstack-origin:
+    type: string
+    default: distro
+    description: |
+      Repository from which to install. May be one of the following:
+      distro (default), ppa:somecustom/ppa, a deb url sources entry,
+      or a supported Ubuntu Cloud Archive e.g.
+      .
+      cloud:<series>-<openstack-release>
+      cloud:<series>-<openstack-release>/updates
+      cloud:<series>-<openstack-release>/staging
+      cloud:<series>-<openstack-release>/proposed
+      .
+      See https://wiki.ubuntu.com/OpenStack/CloudArchive for info on which
+      cloud archives are available and supported.
+      .
+      NOTE: updating this setting to a source that is known to provide
+      a later version of OpenStack will trigger a software upgrade unless

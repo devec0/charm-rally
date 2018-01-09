@@ -1,0 +1,17 @@
+name: rally
+summary: OpenStack benchmarking service
+maintainer: James Hebden <james.hebden@canonical.com>
+description: |
+  Rally provides a framework for performance analysis and benchmarking of individual OpenStack components as well as full production OpenStack cloud deployments
+tags:
+  - openstack
+  - benchmark
+series:
+  - trusty
+  - xenial
+subordinate: false
+requires:
+  identity-admin:
+    interface: identity-admin
+  shared-db:
+    interface: mysql-shared
